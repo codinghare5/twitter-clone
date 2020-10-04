@@ -18,22 +18,22 @@ function Post({
     return (
         <div className="post">
             <div className="post__avatar">
-                <Avatar src="https://www.flaticon.com/svg/static/icons/svg/560/560216.svg" />
+                <Avatar src={avatar} />
             </div>
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
-                        <h3>Marcin Mukosiej
+                        <h3>{displayName}
                             <span className="post__headerSpecial">
-                                <VerifiedUserIcon className="post__badge" />@marcinmukosiej
+                                {verified && <VerifiedUserIcon className="post__badge" />}@{username}
                             </span>
                         </h3>
                     </div>
                     <div className="post__headerDescription">
-                        <p>I challenge you to build a Twitter clone with React.js</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img src="https://media1.tenor.com/images/dd2d34bdab4eca7f3e68a3a0db16f066/tenor.gif?itemid=8380992" alt="" />
+                <img src={image} alt="" />
                 <div className="post__footer">
                     <Button>
                         <ChatBubbleOutlineIcon fontSize="small" />
